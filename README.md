@@ -1,5 +1,10 @@
-# python-flask
-HTML, Python y Flask.
+# Aip with Python and Flask
+Python y Flask.
+
+## Install Flask
+```py
+pip install flask
+```
 
 ## Migrate db
 ```py
