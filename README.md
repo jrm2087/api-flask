@@ -1,4 +1,4 @@
-# Aip with Python and Flask
+# Api with Python and Flask
 Python y Flask.
 
 ## Install Flask
@@ -11,9 +11,9 @@ pip install flask
 pip install flask-restful
 ```
 
-## List
+## List Dependencies
 ```py
-pip  freeze
+pip freeze
 ```
 
 ## Virtual envs
