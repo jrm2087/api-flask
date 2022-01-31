@@ -6,7 +6,7 @@ Python y Flask.
 pip install flask
 ```
 
-## Install Flask
+## Install Flask-RESTful
 ```py
 pip install flask-restful
 ```
@@ -26,7 +26,7 @@ source venv/bin/activate
 
 deactivate
 
-windows:
+Windows:
 ./venv/Scripts/activate.bat
 
 ```
