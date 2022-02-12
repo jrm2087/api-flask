@@ -131,3 +131,7 @@ dmypy.json
 .idea/
 
 migrations/
+
+# sqlite
+*.db
+
