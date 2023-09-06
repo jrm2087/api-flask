@@ -44,4 +44,9 @@ flask db migrate -m "coment"
 flask db upgrade
 ```
 
+## commands
+```py
+flask run
+```
+
 
