@@ -11,6 +11,11 @@ pip install flask
 pip install flask-restful
 ```
 
+## Install Dependencies from txt file
+```py
+pip install -r requirements.txt
+```
+
 ## List Dependencies
 ```py
 pip freeze
