@@ -81,5 +81,39 @@ def get_item(item_id):
         return abort(404, message="Item not found")
 
 
+@app.delete("/store/<string:store_id>")
+def delete_store(store_id):
+    try:
+        del stores[store_id]
+        return {"message": "Store deleted."}
+    except:
+        abort(404, message="Store not found.")
+
+
+@app.delete("/item/<string:item_id>")
+def delete_item(item_id):
+    try:
+        del items[item_id]
+        return {"message": "Item deleted."}
+    except:
+        abort(404, message="Item not found.")
+
+
+@app.put("/item/<string:item_id>")
+def update_item(item_id):
+    item_data = request.get_json()
+    if "price" not in item_data or "name" not in item_data:
+        abort(400, message="Bad request. Price and name should be in the JSON payload.")
+
+    try:
+        item = items[item_id]
+        item["name"] = item_data["name"]
+        item["price"] = item_data["price"]
+        # item |= item_data # validar version de python
+        return item
+    except:
+        abort(404, "Item not found.")
+
+
 if __name__ == '__main__':
     app.run()
