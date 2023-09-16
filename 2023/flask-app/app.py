@@ -1,7 +1,9 @@
 import os
+import secrets
 
 from flask import Flask
 from flask_smorest import Api
+from flask_jwt_extended import JWTManager
 
 from resources.item import blp as item_blueprint
 from resources.store import blp as store_blueprint
@@ -26,6 +28,9 @@ def create_app(db_url=None):
     db.init_app(app)
 
     api = Api(app)
+
+    app.config["JWT_SECRET_KEY"] = "jrm"  # secrets.SystemRandom().getrandbits(128)
+    jwt = JWTManager(app)
 
     with app.app_context():
         db.create_all()
