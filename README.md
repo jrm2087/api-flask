@@ -72,6 +72,9 @@ docker run -dp 5005:5000 -w /app -v "$(pwd):/app" flask-smorest-api
 
 docker build -t flask-api-app .
 docker run -dp 5015:5000 -w /app -v "$(pwd):/app" flask-api-app
+
+localmente
+docker run -dp 5015:5000 -w /app -v "$(pwd):/app" flask-api-app sh -c "flask run --host 0.0.0.0"
 ```
 
 
