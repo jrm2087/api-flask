@@ -52,6 +52,12 @@ flask db upgrade
 ## commands Flask
 ```py
 flask run
+
+flask db init
+
+flask db migrate
+
+flask db upgrade
 ```
 
 ## commands Docker
@@ -64,7 +70,8 @@ docker run -dp 5005:5000 rest-apis-flask-python
 
 docker run -dp 5005:5000 -w /app -v "$(pwd):/app" flask-smorest-api
 
-
+docker build -t flask-api-app .
+docker run -dp 5015:5000 -w /app -v "$(pwd):/app" flask-api-app
 ```
 
 
